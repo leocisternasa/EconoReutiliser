@@ -1,11 +1,11 @@
-import { View, Text } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 
-const Home = () => {
+const StartPage = () => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={{ flex: 1, justifyContent: "center" }}>
+      <ActivityIndicator size="large" color="green" />
     </View>
   );
 };
 
-export default Home;
+export default StartPage;
