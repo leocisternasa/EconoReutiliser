@@ -1,4 +1,5 @@
 import { useSignIn } from "@clerk/clerk-expo";
+import FontAwesome from "@expo/vector-icons/build/FontAwesome";
 import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
@@ -39,9 +40,20 @@ const Login = () => {
     }
   };
 
+  const loginWithGoogle = () => {
+    console.log("Button pressed");
+  };
+
   return (
     <View style={styles.container}>
       <Spinner visible={loading} />
+      <FontAwesome.Button
+        name="google"
+        backgroundColor="#3b5998"
+        onPress={loginWithGoogle}
+      >
+        Login with Google
+      </FontAwesome.Button>
 
       <TextInput
         autoCapitalize="none"
